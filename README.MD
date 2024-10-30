@@ -2,8 +2,8 @@
 
 This is the official implementation of the following paper:
 
->UniGAD: Unifying Multi-level Graph Anomaly Detection
->Yiqing Lin, Jianheng Tang, Chenyi Zi, H.Vicky Zhao, Yuan Yao, Jia Li
+>UniGAD: Unifying Multi-level Graph Anomaly Detection  
+>Yiqing Lin, Jianheng Tang, Chenyi Zi, H.Vicky Zhao, Yuan Yao, Jia Li  
 >NeurIPS 2024 
 
 Environment Setup
