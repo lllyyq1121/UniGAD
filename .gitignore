@@ -1,0 +1,7 @@
+__pycache__/
+modes/__pycache__/
+results/
+pretrained_models/
+*.pt
+*.pdf
+*.png
