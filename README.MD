@@ -9,13 +9,19 @@ This is the official implementation of the following paper:
 Environment Setup
 -----------------
 
-Before you start, install Pytorch and DGL with appropriate CUDA support. Please refer to the PyTorch and DGL websites for the specific guidlines.
+Before you start, install Pytorch and DGL with appropriate CUDA support. Please refer to the PyTorch and DGL websites for the specific guidelines.
 
 Install dependencies:
 
 ```shell
 pip install -r requirements.txt
 ```
+
+Datasets
+-----------------
+We release a real-world large-scale social group dataset T-Group in the paper, which contains both node anomaly labels and graph anomaly labels. The dataset is on [google drive](https://drive.google.com/file/d/1B-pmATZt9aBmxD8PkuUFAP6ZI-939Xma/view?usp=sharing). Download and unzip the file in the dataset folder.
+
+
 
 Experiments
 -----------------
@@ -40,7 +46,7 @@ cd src/
 python main.py --datasets 1 --pretrain_model graphmae --kernels bwgnn,gcn --lr 5e-4 --save_model --epoch_pretrain 50 --batch_size 1 --khop 1 --epoch_ft 300 --lr_ft 0.003 --final_mlp_layers 3 --cross_modes ne2ne,n2ne,e2ne --metric AUROC --trials 5
 ```
 
->Note: In our experiments we found that typically hop = 1 or 2 is optimal, so the MRQSampler in our code is implemented as two unfolded versions dedicated to orders 1 and 2 rather than a recursive version for the performance.
+>Note: In our experiments, we found that typically hop = 1 or 2 is optimal, so the MRQSampler in our code is implemented as two unfolded versions dedicated to orders 1 and 2 rather than a recursive version for the performance.
 
 
 ## Reference
